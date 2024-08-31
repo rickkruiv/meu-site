@@ -325,6 +325,8 @@ main {
 }
 
 #experience-container {
+    width: 100%;
+
     & div {
         margin-bottom: 1rem;
     }
@@ -354,6 +356,7 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 6rem;
 }
@@ -366,7 +369,6 @@ main {
     svg {
         width: 130px;
         height: 130px;
-        position: relative;
         transform: rotate(270deg);
         position: relative;
 
@@ -450,7 +452,7 @@ circle:nth-child(2) {
 
     & .quadro {
         margin-bottom: 1rem;
-        transform: translateX(-5%);
+        transform: translateX(-5%, -5%);
         opacity: 0;
         transition: 1s;
 
@@ -477,7 +479,7 @@ circle:nth-child(2) {
 
     & .quadro.visible {
         opacity: 1;
-        transform: translateX(0);
+        transform: translateX(0, 0);
     }
 }
 
@@ -489,6 +491,151 @@ circle:nth-child(2) {
 
     & h2 {
         font-size: 3rem;
-    } 
+    }
 
+}
+
+@media (max-width: 1300px) {
+    body {
+        padding-inline: 2rem;
+    }
+
+    main {
+        margin: 0;
+        width: 100%;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .content-section {
+        width: 100%;
+    }
+
+    #carrossel-container {
+        position: relative;
+        height: 320px;
+        padding: 1rem;
+    }
+
+    .carrossel-content.active {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carrossel-content {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
+    }
+
+    .carrossel-content h4 {
+        padding-left: 0;
+        width: 120px;
+    }
+
+    .title {
+        & h2 {
+            padding-left: 0;
+        }
+    }
+
+    .carrossel-content p {
+        border-left: 0;
+        padding-left: 0;
+    }
+
+    #carrossel-container button.back-btn,
+    #carrossel-container button.next-btn {
+        opacity: 1;
+        top: 45%;
+        transform: scale(.8);
+    }
+
+    .next-btn {
+        right: 0;
+    }
+
+    .back-btn {
+        left: 0;
+    }
+
+    .skills {
+        gap: 1rem;
+        transform: scale(.8);
+    }
+}
+
+@media (max-width: 900px) {
+    section {
+        padding-top: 7rem !important;
+    }
+
+    .sobre-mim {
+        flex-direction: column;
+    }
+
+    #about-me-content {
+        & h1 {
+            width: 100% !important;
+            font-size: 2.2rem !important;
+            line-height: 1.76rem;
+        }
+
+        & p {
+            padding-left: 0 !important;
+        }
+
+        & p::before {
+            content: '';
+            display: none;
+        }
+    }
+
+    #header {
+        width: 100%;
+    }
+
+    #header #pg-title {
+        font-size: 1.4rem;
+        position: relative;
+    }
+
+    #header h2 img {
+        width: 1.3rem !important;
+    }
+
+    nav {
+        position: absolute;
+        top: 3.5rem;
+        left: 2rem;
+
+        background-color: var(--nav);
+        display: none !important;
+    }
+
+    nav.open {
+        display: flex !important;
+        flex-direction: column;
+        gap: .5rem;
+        padding: .5rem;
+        border-radius: 10px;
+    }
+
+    .toggle-switch {
+        right: 1rem;
+    }
+}
+
+@media (max-width: 450px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    .next-btn,
+    .back-btn {
+        transform: scale(.6);
+    }
 }

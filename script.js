@@ -64,14 +64,6 @@ function openNav() {
     navbar.classList.toggle("open");
 }
 
-const array = {
-    html: 90,
-    css: 85,
-    js: 75,
-    react: 5,
-    python: 40,
-}
-
 document.addEventListener('DOMContentLoaded', function () {
     const skills = document.querySelectorAll(".skill-stats");
     const imgs = document.querySelectorAll('.quadro');
