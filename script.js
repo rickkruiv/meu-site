@@ -83,6 +83,8 @@ document.addEventListener('DOMContentLoaded', function () {
                     skill.querySelector('circle:nth-child(2)').style.strokeDashoffset = calcStrokeOffSet(5);
                 } else if (skill.classList.contains('python')) {
                     skill.querySelector('circle:nth-child(2)').style.strokeDashoffset = calcStrokeOffSet(45);
+                } else if (skill.classList.contains("seo")) {
+                    skill.querySelector('circle:nth-child(2)').style.strokeDashoffset = calcStrokeOffSet(50)
                 };
             };
         }, {
@@ -110,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function calcStrokeOffSet(percent) {
-        const circumreference = 380;
+        const circumreference = 375;
         return circumreference - (percent * circumreference / 100);
     };
 });

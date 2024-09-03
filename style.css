@@ -356,15 +356,14 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-wrap: wrap;
     gap: 2rem;
     margin-top: 6rem;
 }
 
 .skill-stats {
     position: relative;
-    cursor: pointer;
     user-select: none;
+    cursor: pointer;
 
     svg {
         width: 130px;
@@ -379,8 +378,8 @@ main {
             stroke: var(--purple);
             stroke-width: 10px;
             transform: translate(5px, 5px);
-            stroke-dasharray: 380;
-            stroke-dashoffset: 380;
+            stroke-dasharray: 375;
+            stroke-dashoffset: 375;
         }
 
         & circle:nth-child(1) {
@@ -431,6 +430,12 @@ circle:nth-child(2) {
 .react {
     & svg circle {
         stroke: #53C1DE;
+    }
+}
+
+.seo {
+    & svg circle {
+        stroke: #FF9900;
     }
 }
 
@@ -633,8 +638,9 @@ circle:nth-child(2) {
         right: 1rem;
     }
 
-
-    
+    .skills {
+        flex-wrap: wrap;
+    }
 }
 
 @media (max-width: 450px) {
@@ -649,7 +655,7 @@ circle:nth-child(2) {
 
     #quadros-container {
         display: block;
-    
+
         & img {
             width: 100%;
             height: 50%;
